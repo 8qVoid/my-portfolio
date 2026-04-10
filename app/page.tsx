@@ -224,11 +224,11 @@ const toolbox = [
 export default function Home() {
   return (
     <main className="relative overflow-hidden bg-[var(--color-ink)] text-[var(--color-paper)]">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-8rem] top-[-6rem] h-72 w-72 rounded-full bg-[var(--color-accent)]/30 blur-3xl" />
-        <div className="absolute right-[-6rem] top-32 h-80 w-80 rounded-full bg-[var(--color-warm)]/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-white/6 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.07),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_30%)]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute left-[-8rem] top-[-6rem] h-96 w-96 rounded-full bg-[var(--color-accent)]/20 blur-[100px] animate-[float_8s_ease-in-out_infinite]" />
+        <div className="absolute right-[-6rem] top-32 h-96 w-96 rounded-full bg-[var(--color-warm)]/20 blur-[100px] animate-[pulse-glow_6s_ease-in-out_infinite]" />
+        <div className="absolute bottom-[-10rem] left-1/3 h-[40rem] w-[40rem] rounded-full bg-[var(--color-accent-deep)]/20 blur-[120px] animate-[float_10s_ease-in-out_infinite_reverse]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,240,255,0.05),transparent_40%),linear-gradient(180deg,rgba(5,5,7,0.8),rgba(5,5,7,1))]" />
       </div>
 
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 pb-16 pt-6 sm:px-10 lg:px-12">
@@ -237,9 +237,8 @@ export default function Home() {
             <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
               Mark // vibe coder portfolio
             </p>
-            <h1 className="mt-3 max-w-xl font-display text-4xl leading-none sm:text-6xl lg:text-7xl">
-              I build websites and apps that turn raw ideas into products people
-              can actually use.
+            <h1 className="mt-4 max-w-2xl font-display text-5xl leading-tight sm:text-6xl lg:text-7xl">
+              I build websites and apps that turn raw ideas into <span className="highlight-text">products people can actually use.</span>
             </h1>
           </div>
 
@@ -266,16 +265,16 @@ export default function Home() {
                 Contact
               </a>
             </nav>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4 mt-2">
               <a
                 href="#projects"
-                className="rounded-full border border-white/15 bg-white px-5 py-2.5 font-medium text-[var(--color-ink)] transition hover:-translate-y-0.5 hover:bg-[var(--color-accent)]"
+                className="glow-btn rounded-full border border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition-all hover:bg-[var(--color-accent)] hover:text-[var(--color-ink)]"
               >
                 View projects
               </a>
               <a
                 href="#about"
-                className="rounded-full border border-white/15 px-5 py-2.5 font-medium text-white transition hover:-translate-y-0.5 hover:border-[var(--color-accent-soft)] hover:text-[var(--color-accent-soft)]"
+                className="rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-6 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:bg-white/10"
               >
                 Why I build like this
               </a>
@@ -284,7 +283,7 @@ export default function Home() {
         </header>
 
         <div className="grid gap-6 lg:grid-cols-[1.35fr_0.9fr]">
-          <div className="rounded-[2rem] border border-white/10 bg-white/8 p-6 shadow-2xl shadow-black/30 backdrop-blur md:p-8">
+          <div className="glass-card rounded-[2rem] p-6 shadow-2xl shadow-black/30 md:p-8">
             <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[var(--color-accent-soft)]">
               <span>Featured work</span>
               <span className="h-1 w-1 rounded-full bg-[var(--color-accent-soft)]" />
@@ -295,7 +294,7 @@ export default function Home() {
               {featuredProjects.map((project) => (
                 <article
                   key={project.title}
-                  className="group rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.11),rgba(255,255,255,0.04))] p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent-soft)]"
+                  className="group glass-card rounded-[1.5rem] p-6 text-left"
                 >
                   <div className="flex items-center justify-between gap-3">
                     <p className="text-xs uppercase tracking-[0.3em] text-white/55">
@@ -320,7 +319,8 @@ export default function Home() {
           </div>
 
           <aside className="grid gap-6">
-            <div className="rounded-[2rem] border border-[var(--color-accent-soft)]/30 bg-[var(--color-accent)]/12 p-6">
+            <div className="glass-card rounded-[2rem] p-6 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-warm)]"></div>
               <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
                 Quick intro
               </p>
@@ -332,27 +332,27 @@ export default function Home() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/7 p-5">
-                <p className="font-display text-4xl text-[var(--color-warm)]">
+              <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
+                <p className="font-display text-4xl text-[var(--color-accent)]">
                   3
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/55">
+                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
                   Portfolio builds
                 </p>
               </div>
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/7 p-5">
-                <p className="font-display text-4xl text-[var(--color-warm)]">
+              <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
+                <p className="font-display text-4xl text-[var(--color-accent)]">
                   Web + mobile
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/55">
+                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
                   UI, auth, flows, dashboards
                 </p>
               </div>
-              <div className="rounded-[1.75rem] border border-white/10 bg-white/7 p-5">
-                <p className="font-display text-4xl text-[var(--color-warm)]">
+              <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
+                <p className="font-display text-4xl text-[var(--color-accent)]">
                   Product-first
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/55">
+                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
                   Not just static landing pages
                 </p>
               </div>
@@ -370,8 +370,8 @@ export default function Home() {
             <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
               Selected projects
             </p>
-            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-none sm:text-5xl">
-              Projects that show how I think through product flow.
+            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight sm:text-5xl">
+              Projects that show how I think through <span className="highlight-text">product flow.</span>
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-7 text-white/70 sm:text-base">
@@ -385,7 +385,7 @@ export default function Home() {
           {featuredProjects.map((project, index) => (
             <article
               key={project.title}
-              className="grid gap-6 rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,248,241,0.08),rgba(255,255,255,0.03))] p-6 shadow-xl shadow-black/20 lg:p-8"
+              className="grid gap-6 glass-card rounded-[2rem] p-6 lg:p-8"
             >
               <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
                 <div className="flex flex-col justify-between gap-6 rounded-[1.5rem] bg-black/25 p-6">
@@ -512,21 +512,22 @@ export default function Home() {
         id="about"
         className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:px-12"
       >
-        <div className="rounded-[2rem] border border-white/10 bg-[var(--color-paper)] p-6 text-[var(--color-ink)] sm:p-8">
-          <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-deep)]">
+        <div className="glass-card rounded-[2rem] p-6 text-white sm:p-10 relative overflow-hidden">
+          <div className="absolute -right-20 -top-20 w-64 h-64 bg-[var(--color-accent)]/20 rounded-full blur-[80px]"></div>
+          <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent)]">
             About this portfolio
           </p>
-          <h2 className="mt-4 font-display text-4xl leading-none sm:text-5xl">
-            I&apos;m a vibe coder, but the work still has structure.
+          <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
+            I&apos;m a vibe coder, but the work still has <span className="highlight-text">structure.</span>
           </h2>
-          <p className="mt-6 text-base leading-8 text-black/72">
+          <p className="mt-6 text-base leading-8 text-white/80">
             I like moving quickly from idea to interface, whether that means a
             website, a full-stack web app, or an Android app. Then I layer in
             the logic that makes the product credible. My portfolio is less
             about saying I know everything and more about proving I can build
             something useful, visual, and complete.
           </p>
-          <p className="mt-4 text-base leading-8 text-black/72">
+          <p className="mt-4 text-base leading-8 text-white/80">
             The goal is simple: make projects that look good, behave well, and
             show clear user-centered thinking.
           </p>
@@ -536,7 +537,7 @@ export default function Home() {
           {principles.map((principle) => (
             <article
               key={principle.title}
-              className="rounded-[1.75rem] border border-white/10 bg-white/6 p-6"
+              className="glass-card rounded-[1.75rem] p-6"
             >
               <h3 className="font-display text-3xl leading-none text-white">
                 {principle.title}
@@ -596,7 +597,8 @@ export default function Home() {
         id="skills"
         className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
       >
-        <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,180,95,0.17),rgba(255,255,255,0.05))] p-6 sm:p-8">
+        <div className="glass-card relative overflow-hidden rounded-[2rem] p-6 sm:p-10">
+          <div className="absolute -left-20 -top-20 w-80 h-80 bg-[var(--color-warm)]/10 rounded-full blur-[80px]"></div>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
@@ -643,7 +645,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:moosec06@gmail.com"
-            className="mt-8 inline-flex rounded-full border border-white/15 bg-white px-5 py-3 font-medium text-[var(--color-ink)] transition hover:-translate-y-0.5 hover:bg-[var(--color-accent)]"
+            className="mt-8 inline-flex glow-btn rounded-full border border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 px-8 py-4 font-medium text-white backdrop-blur-sm transition-all hover:bg-[var(--color-accent)] hover:text-[var(--color-ink)]"
           >
             moosec06@gmail.com
           </a>
