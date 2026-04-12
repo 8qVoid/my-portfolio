@@ -140,7 +140,7 @@ const featuredProjects = [
       "WorkManager",
       "Java 17",
     ],
-    repoUrl: "#",
+    repoUrl: "https://github.com/8qVoid/Exist.git",
     tools: [
       "Local email and password auth persisted on device",
       "CameraX photo capture with optional video challenge mode",
@@ -175,6 +175,68 @@ const featuredProjects = [
       "Save multiple memories for the same day",
       "Review recap, archive, and analytics screens",
       "Manage reminders and challenge settings in profile",
+    ],
+  },
+  {
+    title: "SyncUp",
+    label: "Accountability partner finder",
+    year: "2026",
+    summary:
+      "A platform connecting people with accountability partners to stay consistent with their habits and goals through discovery, profiles, and secure messaging.",
+    vibe:
+      "Focused on secure user flows and clean discovery. Features 'Teaser Mode' which allows open browsing of partners while gating interaction behind authentication.",
+    stack: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer Motion",
+      "Lucide Icons",
+      "Canvas Confetti",
+      "Custom CSS",
+    ],
+    repoUrl: "https://github.com/8qVoid/accountability-partner-finder.git",
+    tools: [
+      "Teaser Mode discovery gating",
+      "Partner matching and profile management",
+      "Interactive connection requests",
+      "Dynamic dashboard with partnership tracking",
+    ],
+    screenshots: [
+      {
+        src: "/projects/accountability-partner-finder/landing_page_png_1775963495913.png",
+        alt: "SyncUp landing page",
+      },
+      {
+        src: "/projects/accountability-partner-finder/discovery_page_png_1775963519968.png",
+        alt: "SyncUp partner discovery feed",
+      },
+      {
+        src: "/projects/accountability-partner-finder/partner_profile_png_1775963531275.png",
+        alt: "SyncUp partner profile details",
+      },
+      {
+        src: "/projects/accountability-partner-finder/auth_modal_png_1775963508014.png",
+        alt: "SyncUp authentication modal",
+      },
+      {
+        src: "/projects/accountability-partner-finder/partnership_dashboard_png_1775963843509.png",
+        alt: "SyncUp partnership dashboard",
+      },
+    ],
+    screenshotLabel: "Check out the discovery feed, partner profiles, and dashboard",
+    highlights: [
+      "Secure Teaser Mode for onboarding",
+      "Real-time partner discovery and filtering",
+      "Comprehensive partner profiles and reputation",
+      "Partnership lifecycle management",
+    ],
+    flow: [
+      "Explore the discovery feed",
+      "Review potential partners",
+      "Join or sign in to connect",
+      "Manage partnerships on the dashboard",
+      "Track progress and stay accountable",
     ],
   },
 ];
@@ -235,7 +297,7 @@ export default function Home() {
         <header className="mb-14 flex flex-col gap-6 border-b border-white/10 pb-8 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
-              Mark // vibe coder portfolio
+              Mark Laurence Erezuela // vibe coder portfolio
             </p>
             <h1 className="mt-4 max-w-2xl font-display text-5xl leading-tight sm:text-6xl lg:text-7xl">
               I build websites and apps that turn raw ideas into <span className="highlight-text">products people can actually use.</span>
@@ -334,7 +396,7 @@ export default function Home() {
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
               <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
                 <p className="font-display text-4xl text-[var(--color-accent)]">
-                  3
+                  4
                 </p>
                 <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
                   Portfolio builds
