@@ -178,6 +178,53 @@ const featuredProjects = [
     ],
   },
   {
+    title: "2Way Camera",
+    label: "Dual-format camera app",
+    year: "2026",
+    summary:
+      "A Kotlin Android camera app that records one moment and exports it in vertical 9:16 and horizontal 16:9 formats for short-form and landscape video workflows.",
+    vibe:
+      "Built for creators who need to frame once and publish in two formats. The app focuses on practical camera controls, live composition, local saving, and privacy-friendly export behavior.",
+    stack: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Material 3",
+      "Camera2 API",
+      "MediaRecorder",
+      "AndroidX Media3",
+      "Accompanist Permissions",
+      "Gradle Kotlin DSL",
+      "JDK 21",
+    ],
+    repoUrl: "https://github.com/8qVoid/2Way-Camera.git",
+    tools: [
+      "Dual live preview for vertical and horizontal framing",
+      "Camera2 preview and recording pipeline",
+      "Media3 Transformer for aspect-ratio exports",
+      "Local gallery saves without an in-app upload path",
+    ],
+    screenshots: [
+      {
+        src: "/projects/2Way Camera/image.png",
+        alt: "2Way Camera app preview",
+      },
+    ],
+    screenshotLabel: "Drop 2Way Camera preview screenshots here",
+    highlights: [
+      "Vertical 9:16 and horizontal 16:9 export options",
+      "One-tap recording with pause and resume",
+      "Tap-to-focus, flash toggle, and front/back camera switch",
+      "Recent video thumbnail and gallery save flow",
+    ],
+    flow: [
+      "Open the camera preview",
+      "Compose for vertical and horizontal output",
+      "Record with focus, flash, and camera controls",
+      "Choose whether to create a second export",
+      "Save videos locally under Movies/2WayCamera",
+    ],
+  },
+  {
     title: "SyncUp",
     label: "Accountability partner finder",
     year: "2026",
@@ -273,6 +320,8 @@ const toolbox = [
   "Blade",
   "Android",
   "Jetpack Compose",
+  "Camera2",
+  "Media3",
   "Tailwind CSS",
   "Vite",
   "JavaScript",
@@ -286,11 +335,10 @@ const toolbox = [
 export default function Home() {
   return (
     <main className="relative overflow-hidden bg-[var(--color-ink)] text-[var(--color-paper)]">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-[-8rem] top-[-6rem] h-96 w-96 rounded-full bg-[var(--color-accent)]/20 blur-[100px] animate-[float_8s_ease-in-out_infinite]" />
-        <div className="absolute right-[-6rem] top-32 h-96 w-96 rounded-full bg-[var(--color-warm)]/20 blur-[100px] animate-[pulse-glow_6s_ease-in-out_infinite]" />
-        <div className="absolute bottom-[-10rem] left-1/3 h-[40rem] w-[40rem] rounded-full bg-[var(--color-accent-deep)]/20 blur-[120px] animate-[float_10s_ease-in-out_infinite_reverse]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,240,255,0.05),transparent_40%),linear-gradient(180deg,rgba(5,5,7,0.8),rgba(5,5,7,1))]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(0,240,255,0.14),transparent_34%),radial-gradient(circle_at_86%_18%,rgba(255,0,85,0.11),transparent_30%),linear-gradient(180deg,rgba(5,5,7,0),rgba(5,5,7,0.92)_42%,rgba(5,5,7,1))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:80px_80px] opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--color-ink)]/50 to-[var(--color-ink)]" />
       </div>
 
       <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 pb-16 pt-6 sm:px-10 lg:px-12">
@@ -349,7 +397,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[var(--color-accent-soft)]">
               <span>Featured work</span>
               <span className="h-1 w-1 rounded-full bg-[var(--color-accent-soft)]" />
-              <span>Laravel-heavy builds</span>
+              <span>Web and Android builds</span>
             </div>
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -396,7 +444,7 @@ export default function Home() {
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
               <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
                 <p className="font-display text-4xl text-[var(--color-accent)]">
-                  4
+                  5
                 </p>
                 <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
                   Portfolio builds
