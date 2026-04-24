@@ -334,157 +334,152 @@ const toolbox = [
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden bg-[var(--color-ink)] text-[var(--color-paper)]">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(0,240,255,0.14),transparent_34%),radial-gradient(circle_at_86%_18%,rgba(255,0,85,0.11),transparent_30%),linear-gradient(180deg,rgba(5,5,7,0),rgba(5,5,7,0.92)_42%,rgba(5,5,7,1))]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:80px_80px] opacity-25" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--color-ink)]/50 to-[var(--color-ink)]" />
+    <main className="relative overflow-hidden bg-[var(--background)] text-[var(--color-ink)]">
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute left-0 right-0 top-[30rem] h-44 rotate-[-1deg] bg-[var(--color-accent)]/65" />
+        <div className="absolute left-[-6rem] top-24 h-56 w-56 rounded-full border border-[var(--color-ink)]/10" />
+        <div className="absolute right-[-3rem] top-[48rem] h-36 w-36 rounded-full border border-[var(--color-ink)]/10" />
       </div>
 
-      <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 pb-16 pt-6 sm:px-10 lg:px-12">
-        <header className="mb-14 flex flex-col gap-6 border-b border-white/10 pb-8 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
-              Mark Laurence Erezuela // vibe coder portfolio
-            </p>
-            <h1 className="mt-4 max-w-2xl font-display text-5xl leading-tight sm:text-6xl lg:text-7xl">
-              I build websites and apps that turn raw ideas into <span className="highlight-text">products people can actually use.</span>
-            </h1>
+      <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-5 pb-10 pt-8 sm:px-8 lg:px-10">
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.16em]">
+          Portfolio / Product notes
+        </p>
+        <div className="paper-shell border-[1.5px] border-[var(--color-ink)] px-5 py-6 sm:px-8 lg:px-10">
+        <header className="mb-14 flex flex-col gap-5 border-b border-[var(--color-ink)]/25 pb-6 md:flex-row md:items-start md:justify-between">
+          <div className="font-display text-3xl font-bold lowercase leading-none">
+            mark.dev
           </div>
 
-          <div className="max-w-sm space-y-4 text-sm leading-7 text-white/72 sm:text-base">
-            <p>
-              I build portfolio websites, full-stack web apps, and Android apps
-              with strong product flow, clean UI, and enough logic to feel real
-              instead of fake-pretty.
-            </p>
-            <nav className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-white/48">
-              <a href="#about" className="rounded-full border border-white/10 px-3 py-1.5 hover:text-[var(--color-accent-soft)]">
+          <nav className="flex flex-wrap gap-x-6 gap-y-3 font-mono text-[0.68rem] uppercase tracking-[0.16em]">
+              <a href="#about" className="ink-link">
                 About
               </a>
-              <a href="#projects" className="rounded-full border border-white/10 px-3 py-1.5 hover:text-[var(--color-accent-soft)]">
-                Projects
+              <a href="#projects" className="ink-link">
+                Work
               </a>
-              <a href="#skills" className="rounded-full border border-white/10 px-3 py-1.5 hover:text-[var(--color-accent-soft)]">
+              <a href="#skills" className="ink-link">
                 Skills
               </a>
-              <a href="#vibe-coding" className="rounded-full border border-white/10 px-3 py-1.5 hover:text-[var(--color-accent-soft)]">
-                Vibe coding
+              <a href="#vibe-coding" className="ink-link">
+                Process
               </a>
-              <a href="#contact" className="rounded-full border border-white/10 px-3 py-1.5 hover:text-[var(--color-accent-soft)]">
+              <a href="#contact" className="ink-link">
                 Contact
               </a>
             </nav>
-            <div className="flex flex-wrap gap-4 mt-2">
+        </header>
+
+        <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.2em]">
+              Mark Laurence Erezuela / portfolio
+            </p>
+            <h1 className="mt-8 max-w-2xl font-display text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">
+              Building useful web and mobile products from rough ideas.
+            </h1>
+            <p className="mt-7 max-w-xl font-mono text-sm uppercase leading-8 tracking-[0.18em]">
+              Full-stack apps / Android flows / portfolio systems
+            </p>
+            <p className="mt-8 max-w-lg text-base leading-8">
+              I like turning messy concepts into <span className="highlight-text">usable product flows</span> with
+              real screens, clear states, and enough structure to feel shippable.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#projects"
-                className="glow-btn rounded-full border border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition-all hover:bg-[var(--color-accent)] hover:text-[var(--color-ink)]"
+                className="glow-btn border border-[var(--color-ink)] bg-[var(--color-accent)] px-6 py-3 font-mono text-sm uppercase tracking-[0.16em]"
               >
-                View projects
+                Open the work -&gt;
               </a>
               <a
                 href="#about"
-                className="rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-6 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:bg-white/10"
+                className="border border-[var(--color-ink)] bg-[var(--color-paper)] px-6 py-3 font-mono text-sm uppercase tracking-[0.16em] shadow-[3px_3px_0_rgba(39,35,29,0.13)] transition hover:-translate-y-0.5"
               >
-                Why I build like this
+                About me
               </a>
             </div>
           </div>
-        </header>
 
-        <div className="grid gap-6 lg:grid-cols-[1.35fr_0.9fr]">
-          <div className="glass-card rounded-[2rem] p-6 shadow-2xl shadow-black/30 md:p-8">
-            <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[var(--color-accent-soft)]">
-              <span>Featured work</span>
-              <span className="h-1 w-1 rounded-full bg-[var(--color-accent-soft)]" />
-              <span>Web and Android builds</span>
-            </div>
-
-            <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              {featuredProjects.map((project) => (
-                <article
-                  key={project.title}
-                  className="group glass-card rounded-[1.5rem] p-6 text-left"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/55">
-                      {project.label}
+          <div className="relative mx-auto w-full max-w-md">
+            <div className="glass-card rotate-[0.7deg] p-5">
+              <div className="aspect-[4/3] border border-[var(--color-ink)] bg-[#f5ead4] p-6">
+                <div className="flex h-full flex-col justify-between">
+                  <div className="flex items-start justify-between gap-6">
+                    <p className="font-mono text-xs uppercase leading-6 tracking-[0.18em]">
+                      Current focus
                     </p>
-                    <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/70">
-                      {project.year}
+                    <span className="rounded-full border border-[var(--color-ink)] px-3 py-1 font-mono text-xs">
+                      2026
                     </span>
                   </div>
-                  <h2 className="mt-4 font-display text-3xl leading-none text-white">
-                    {project.title}
-                  </h2>
-                  <p className="mt-4 text-sm leading-7 text-white/74">
-                    {project.summary}
-                  </p>
-                  <p className="mt-4 border-l border-[var(--color-accent-soft)]/50 pl-4 text-sm leading-7 text-[var(--color-paper)]">
-                    {project.vibe}
-                  </p>
-                </article>
-              ))}
+                  <div className="space-y-4">
+                    <div className="h-3 w-3 rounded-full bg-[var(--color-warm)]" />
+                    <p className="font-display text-4xl leading-none">
+                      portfolio builds that behave like real products
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3 font-mono text-[0.65rem] uppercase tracking-[0.12em]">
+                    <span className="border-t border-[var(--color-ink)] pt-2">UI</span>
+                    <span className="border-t border-[var(--color-ink)] pt-2">Logic</span>
+                    <span className="border-t border-[var(--color-ink)] pt-2">Flow</span>
+                  </div>
+                </div>
+              </div>
             </div>
+            <p className="absolute -right-4 top-24 hidden rotate-[-6deg] font-mono text-sm sm:block">
+              less demo,<br />more product
+            </p>
           </div>
+        </div>
 
-          <aside className="grid gap-6">
-            <div className="glass-card rounded-[2rem] p-6 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-warm)]"></div>
-              <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
-                Quick intro
-              </p>
-              <p className="mt-4 text-lg leading-8 text-white/82">
-                I am a builder who likes shipping ambitious websites and apps
-                fast, then tightening the flow until the product feels
-                believable.
-              </p>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-              <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
-                <p className="font-display text-4xl text-[var(--color-accent)]">
+        <div className="soft-band -mx-5 mt-16 grid gap-5 border-y border-[var(--color-ink)]/20 px-5 py-8 sm:-mx-8 sm:grid-cols-3 sm:px-8 lg:-mx-10 lg:px-10">
+              <div>
+                <p className="font-display text-4xl">
                   5
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
+                <p className="mt-2 font-mono text-xs uppercase tracking-[0.18em]">
                   Portfolio builds
                 </p>
               </div>
-              <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
-                <p className="font-display text-4xl text-[var(--color-accent)]">
+              <div>
+                <p className="font-display text-4xl">
                   Web + mobile
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
+                <p className="mt-2 font-mono text-xs uppercase tracking-[0.18em]">
                   UI, auth, flows, dashboards
                 </p>
               </div>
-              <div className="glass-card rounded-[1.75rem] p-5 text-center sm:text-left transition-all hover:border-[var(--color-accent)]/50">
-                <p className="font-display text-4xl text-[var(--color-accent)]">
+              <div>
+                <p className="font-display text-4xl">
                   Product-first
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-white/70">
+                <p className="mt-2 font-mono text-xs uppercase tracking-[0.18em]">
                   Not just static landing pages
                 </p>
               </div>
-            </div>
-          </aside>
+        </div>
         </div>
       </section>
 
       <section
         id="projects"
-        className="relative mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
+        className="relative mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10"
       >
-        <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.16em]">
+          Selected work
+        </p>
+        <div className="paper-shell border-[1.5px] border-[var(--color-ink)] px-5 py-10 sm:px-8 lg:px-10">
+        <div className="mb-10 flex flex-col gap-4 text-center lg:items-center">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
+            <p className="font-mono text-xs uppercase tracking-[0.2em]">
               Selected projects
             </p>
-            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight sm:text-5xl">
-              Projects that show how I think through <span className="highlight-text">product flow.</span>
+            <h2 className="sketch-line mx-auto mt-3 max-w-2xl font-display text-4xl leading-tight sm:text-5xl">
+              Projects with product flow
             </h2>
           </div>
-          <p className="max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+          <p className="mx-auto max-w-2xl text-sm leading-7 sm:text-base">
             These projects go beyond CRUD screenshots. They include account
             states, user journeys, workflow logic, mobile capture flows, and
             enough UI polish to feel like real products.
@@ -495,31 +490,34 @@ export default function Home() {
           {featuredProjects.map((project, index) => (
             <article
               key={project.title}
-              className="grid gap-6 glass-card rounded-[2rem] p-6 lg:p-8"
+              className="grid gap-6 glass-card p-5 lg:p-7"
             >
               <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-                <div className="flex flex-col justify-between gap-6 rounded-[1.5rem] bg-black/25 p-6">
+                <div className="flex flex-col justify-between gap-6 border border-[var(--color-ink)]/25 bg-[var(--color-paper)]/70 p-5">
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
+                    <p className="font-mono text-xs uppercase tracking-[0.18em]">
                       0{index + 1} / {project.label}
                     </p>
-                    <h3 className="mt-4 font-display text-3xl sm:text-4xl">
+                    <h3 className="mt-4 font-display text-3xl leading-none sm:text-4xl">
                       {project.title}
                     </h3>
-                    <p className="mt-4 text-sm leading-7 text-white/74 sm:text-base">
+                    <p className="mt-4 text-sm leading-7 sm:text-base">
                       {project.summary}
+                    </p>
+                    <p className="mt-4 border-l border-[var(--color-ink)]/35 pl-4 text-sm leading-7">
+                      {project.vibe}
                     </p>
                   </div>
 
                   <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-white/50">
+                    <p className="font-mono text-xs uppercase tracking-[0.18em]">
                       Stack
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {project.stack.map((item) => (
                         <span
                           key={item}
-                          className="rounded-full border border-white/12 bg-white/6 px-3 py-1.5 text-sm text-white/78"
+                          className="border border-[var(--color-ink)]/30 bg-[#f4ecd9] px-3 py-1.5 font-mono text-xs uppercase tracking-[0.08em]"
                         >
                           {item}
                         </span>
@@ -529,38 +527,38 @@ export default function Home() {
                       href={project.repoUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-5 inline-flex rounded-full border border-[var(--color-accent-soft)]/45 px-4 py-2 text-sm font-medium text-[var(--color-paper)] transition hover:-translate-y-0.5 hover:bg-[var(--color-accent)] hover:text-[var(--color-ink)]"
+                      className="mt-5 inline-flex border border-[var(--color-ink)] bg-[var(--color-accent)] px-4 py-2 font-mono text-xs uppercase tracking-[0.14em] shadow-[3px_3px_0_rgba(39,35,29,0.13)] transition hover:-translate-y-0.5"
                     >
-                      View GitHub repo
+                      View GitHub repo -&gt;
                     </a>
                   </div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-[1.5rem] border border-dashed border-white/20 bg-[linear-gradient(135deg,rgba(255,196,141,0.18),rgba(255,255,255,0.06))] p-6">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_35%)]" />
+                <div className="relative overflow-hidden border border-dashed border-[var(--color-ink)]/45 bg-[#f5ead4] p-5">
+                  <div className="tape absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rotate-[-5deg]" />
                   {project.screenshots ? (
                     <ProjectGallery
                       screenshots={project.screenshots}
                       priority={index === 0}
                     />
                   ) : (
-                    <div className="relative flex h-full min-h-72 flex-col justify-between rounded-[1.15rem] border border-white/10 bg-black/20 p-5">
+                    <div className="relative flex h-full min-h-72 flex-col justify-between border border-[var(--color-ink)]/25 bg-[var(--color-paper)] p-5">
                       <div>
-                        <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
+                        <p className="font-mono text-xs uppercase tracking-[0.18em]">
                           Screenshot placeholder
                         </p>
-                        <h4 className="mt-4 font-display text-2xl text-white">
+                        <h4 className="mt-4 font-display text-2xl">
                           Replace with your real project preview
                         </h4>
                       </div>
                       <div className="space-y-4">
-                        <p className="max-w-sm text-sm leading-7 text-white/72">
+                        <p className="max-w-sm text-sm leading-7">
                           {project.screenshotLabel}
                         </p>
                         <div className="grid grid-cols-3 gap-3">
-                          <div className="h-16 rounded-2xl border border-white/10 bg-white/8" />
-                          <div className="h-16 rounded-2xl border border-white/10 bg-white/8" />
-                          <div className="h-16 rounded-2xl border border-white/10 bg-white/8" />
+                          <div className="h-16 border border-[var(--color-ink)]/25 bg-[#f4ecd9]" />
+                          <div className="h-16 border border-[var(--color-ink)]/25 bg-[#f4ecd9]" />
+                          <div className="h-16 border border-[var(--color-ink)]/25 bg-[#f4ecd9]" />
                         </div>
                       </div>
                     </div>
@@ -569,11 +567,11 @@ export default function Home() {
               </div>
 
               <div className="grid gap-6 md:grid-cols-3">
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/6 p-5">
-                  <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-accent-soft)]">
+                <div className="border border-[var(--color-ink)]/25 bg-[#f8f1df] p-5">
+                  <p className="font-mono text-xs uppercase tracking-[0.18em]">
                     Core features
                   </p>
-                  <ul className="mt-4 space-y-3 text-sm leading-7 text-white/78">
+                  <ul className="mt-4 space-y-3 text-sm leading-7">
                     {project.highlights.map((highlight) => (
                       <li key={highlight} className="flex gap-3">
                         <span className="mt-2 h-2 w-2 rounded-full bg-[var(--color-warm)]" />
@@ -583,14 +581,14 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/6 p-5">
-                  <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-accent-soft)]">
+                <div className="border border-[var(--color-ink)]/25 bg-[#f8f1df] p-5">
+                  <p className="font-mono text-xs uppercase tracking-[0.18em]">
                     User journey
                   </p>
-                  <ol className="mt-4 space-y-3 text-sm leading-7 text-white/78">
+                  <ol className="mt-4 space-y-3 text-sm leading-7">
                     {project.flow.map((step, stepIndex) => (
                       <li key={step} className="flex gap-3">
-                        <span className="font-mono text-[var(--color-warm)]">
+                        <span className="font-mono text-[var(--color-accent-soft)]">
                           0{stepIndex + 1}
                         </span>
                         <span>{step}</span>
@@ -599,11 +597,11 @@ export default function Home() {
                   </ol>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/6 p-5">
-                  <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-accent-soft)]">
+                <div className="border border-[var(--color-ink)]/25 bg-[#f8f1df] p-5">
+                  <p className="font-mono text-xs uppercase tracking-[0.18em]">
                     Tools used
                   </p>
-                  <ul className="mt-4 space-y-3 text-sm leading-7 text-white/78">
+                  <ul className="mt-4 space-y-3 text-sm leading-7">
                     {project.tools.map((tool) => (
                       <li key={tool} className="flex gap-3">
                         <span className="mt-2 h-2 w-2 rounded-full bg-[var(--color-accent)]" />
@@ -616,28 +614,32 @@ export default function Home() {
             </article>
           ))}
         </div>
+        </div>
       </section>
 
       <section
         id="about"
-        className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:px-12"
+        className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10"
       >
-        <div className="glass-card rounded-[2rem] p-6 text-white sm:p-10 relative overflow-hidden">
-          <div className="absolute -right-20 -top-20 w-64 h-64 bg-[var(--color-accent)]/20 rounded-full blur-[80px]"></div>
-          <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent)]">
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.16em]">
+          About
+        </p>
+        <div className="paper-shell grid gap-8 border-[1.5px] border-[var(--color-ink)] px-5 py-10 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
+        <div className="relative">
+          <p className="font-mono text-xs uppercase tracking-[0.2em]">
             About this portfolio
           </p>
-          <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-            I&apos;m a vibe coder, but the work still has <span className="highlight-text">structure.</span>
+          <h2 className="sketch-line mt-4 font-display text-4xl leading-tight sm:text-5xl">
+            I&apos;m a vibe coder, but the work still has structure.
           </h2>
-          <p className="mt-6 text-base leading-8 text-white/80">
+          <p className="mt-6 text-base leading-8">
             I like moving quickly from idea to interface, whether that means a
             website, a full-stack web app, or an Android app. Then I layer in
             the logic that makes the product credible. My portfolio is less
             about saying I know everything and more about proving I can build
             something useful, visual, and complete.
           </p>
-          <p className="mt-4 text-base leading-8 text-white/80">
+          <p className="mt-4 text-base leading-8">
             The goal is simple: make projects that look good, behave well, and
             show clear user-centered thinking.
           </p>
@@ -647,31 +649,36 @@ export default function Home() {
           {principles.map((principle) => (
             <article
               key={principle.title}
-              className="glass-card rounded-[1.75rem] p-6"
+              className="glass-card p-5"
             >
-              <h3 className="font-display text-3xl leading-none text-white">
+              <h3 className="font-display text-3xl leading-none">
                 {principle.title}
               </h3>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-white/75 sm:text-base">
+              <p className="mt-4 max-w-xl text-sm leading-7 sm:text-base">
                 {principle.description}
               </p>
             </article>
           ))}
         </div>
+        </div>
       </section>
 
       <section
         id="vibe-coding"
-        className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-12"
+        className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10"
       >
-        <div className="rounded-[2rem] border border-white/10 bg-white/6 p-6 sm:p-8">
-          <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
-            Vibe coding
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.16em]">
+          Process
+        </p>
+        <div className="paper-shell grid gap-8 border-[1.5px] border-[var(--color-ink)] px-5 py-10 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+        <div className="border border-[var(--color-ink)] bg-[#f5ead4] p-6 sm:p-8">
+          <p className="font-mono text-xs uppercase tracking-[0.2em]">
+            Vibe coding, with care
           </p>
           <h2 className="mt-4 font-display text-4xl leading-none sm:text-5xl">
             I vibe code, but I still care about product quality.
           </h2>
-          <p className="mt-6 text-base leading-8 text-white/74">
+          <p className="mt-6 text-base leading-8">
             For me, vibe coding means moving fast, exploring ideas visually,
             and building momentum without overthinking every tiny decision. But
             I still care about UX, flow, structure, and whether the product
@@ -680,45 +687,48 @@ export default function Home() {
         </div>
 
         <div className="grid gap-5">
-          <article className="rounded-[1.75rem] border border-white/10 bg-black/25 p-6">
-            <h3 className="font-display text-3xl leading-none text-white">
+          <article className="glass-card p-6">
+            <h3 className="font-display text-3xl leading-none">
               How I use it
             </h3>
-            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
+            <p className="mt-4 text-sm leading-7 sm:text-base">
               I use vibe coding to get from idea to interface quickly, then I
               refine the details until the build feels intentional, polished,
               and actually usable.
             </p>
           </article>
-          <article className="rounded-[1.75rem] border border-white/10 bg-black/25 p-6">
-            <h3 className="font-display text-3xl leading-none text-white">
+          <article className="glass-card p-6">
+            <h3 className="font-display text-3xl leading-none">
               What still matters
             </h3>
-            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
+            <p className="mt-4 text-sm leading-7 sm:text-base">
               Clean product flow, readable UI, logical state changes, and a
               final result that feels like a real product instead of a random
               prototype.
             </p>
           </article>
         </div>
+        </div>
       </section>
 
       <section
         id="skills"
-        className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-10 lg:px-12"
+        className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10"
       >
-        <div className="glass-card relative overflow-hidden rounded-[2rem] p-6 sm:p-10">
-          <div className="absolute -left-20 -top-20 w-80 h-80 bg-[var(--color-warm)]/10 rounded-full blur-[80px]"></div>
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.16em]">
+          Skills
+        </p>
+        <div className="paper-shell relative overflow-hidden border-[1.5px] border-[var(--color-ink)] px-5 py-10 sm:px-8 lg:px-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
+              <p className="font-mono text-xs uppercase tracking-[0.2em]">
                 Toolbox
               </p>
-              <h2 className="mt-3 font-display text-4xl leading-none sm:text-5xl">
+              <h2 className="sketch-line mt-3 font-display text-4xl leading-none sm:text-5xl">
                 The stack I like using to ship ideas fast.
               </h2>
             </div>
-            <p className="max-w-xl text-sm leading-7 text-white/74 sm:text-base">
+            <p className="max-w-xl text-sm leading-7 sm:text-base">
               My best work usually sits at the intersection of backend logic,
               practical UI, and product thinking. These are the tools I keep
               reaching for.
@@ -729,7 +739,7 @@ export default function Home() {
             {toolbox.map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-white/12 bg-black/20 px-4 py-2 text-sm text-white/85 backdrop-blur"
+                className="border border-[var(--color-ink)]/35 bg-[#f4ecd9] px-4 py-2 font-mono text-xs uppercase tracking-[0.1em]"
               >
                 {item}
               </span>
@@ -740,25 +750,31 @@ export default function Home() {
 
       <section
         id="contact"
-        className="mx-auto w-full max-w-7xl px-6 pb-24 pt-8 sm:px-10 lg:px-12"
+        className="mx-auto w-full max-w-7xl px-5 pb-24 pt-8 sm:px-8 lg:px-10"
       >
-        <div className="rounded-[2rem] border border-[var(--color-accent-soft)]/30 bg-[linear-gradient(135deg,rgba(255,140,66,0.16),rgba(255,255,255,0.04))] p-6 sm:p-8">
-          <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.16em]">
+          Contact
+        </p>
+        <div className="paper-shell relative border-[1.5px] border-[var(--color-ink)] px-5 py-10 sm:px-8 lg:px-10">
+          <p className="font-mono text-xs uppercase tracking-[0.2em]">
             Contact
           </p>
           <h2 className="mt-4 font-display text-4xl leading-none sm:text-5xl">
             Let&apos;s build something cool.
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-white/76">
+          <p className="mt-5 max-w-2xl text-base leading-8">
             If you want someone who can build websites and apps, move fast, and
             still care about the product feel, you can reach me here.
           </p>
           <a
             href="mailto:moosec06@gmail.com"
-            className="mt-8 inline-flex glow-btn rounded-full border border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 px-8 py-4 font-medium text-white backdrop-blur-sm transition-all hover:bg-[var(--color-accent)] hover:text-[var(--color-ink)]"
+            className="glow-btn mt-8 inline-flex border border-[var(--color-ink)] bg-[var(--color-accent)] px-8 py-4 font-mono text-sm uppercase tracking-[0.16em]"
           >
-            moosec06@gmail.com
+            moosec06@gmail.com -&gt;
           </a>
+          <div className="tape absolute right-8 top-10 hidden h-24 w-32 rotate-[4deg] p-4 font-mono text-xs uppercase tracking-[0.12em] sm:block">
+            email me
+          </div>
         </div>
       </section>
     </main>

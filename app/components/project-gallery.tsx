@@ -93,21 +93,21 @@ export default function ProjectGallery({
 
   return (
     <>
-      <div className="relative flex h-full flex-col gap-4 rounded-[1.15rem] border border-white/10 bg-black/20 p-4">
+      <div className="relative flex h-full flex-col gap-4 border border-[var(--color-ink)] bg-[var(--color-paper)] p-4 shadow-[4px_4px_0_rgba(39,35,29,0.12)]">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.35em] text-[var(--color-accent-soft)]">
+          <p className="font-mono text-xs uppercase tracking-[0.18em]">
             Project gallery
           </p>
-          <p className="mt-2 text-sm text-white/65">
-            Swipe, tap a thumbnail, click image to expand, or use the arrows.
+          <p className="mt-2 text-sm text-[var(--color-pencil)]">
+            Tap a thumbnail or open the larger preview.
           </p>
         </div>
         <div className="flex gap-2">
           <button
             type="button"
             onClick={showPrevious}
-            className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/80 transition hover:border-[var(--color-accent-soft)] hover:text-[var(--color-accent-soft)]"
+            className="border border-[var(--color-ink)] bg-[#f4ecd9] px-3 py-2 font-mono text-xs uppercase tracking-[0.12em] transition hover:-translate-y-0.5"
             aria-label="Show previous screenshot"
           >
             Prev
@@ -115,7 +115,7 @@ export default function ProjectGallery({
           <button
             type="button"
             onClick={showNext}
-            className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/80 transition hover:border-[var(--color-accent-soft)] hover:text-[var(--color-accent-soft)]"
+            className="border border-[var(--color-ink)] bg-[#f4ecd9] px-3 py-2 font-mono text-xs uppercase tracking-[0.12em] transition hover:-translate-y-0.5"
             aria-label="Show next screenshot"
           >
             Next
@@ -126,7 +126,7 @@ export default function ProjectGallery({
       <button
         type="button"
         onClick={() => setIsLightboxOpen(true)}
-        className="aspect-[16/10] overflow-hidden rounded-[1.15rem] border border-white/10 bg-black/30 text-left"
+        className="aspect-[16/10] overflow-hidden border border-[var(--color-ink)] bg-[#efe3cb] text-left"
         aria-label="Open fullscreen screenshot"
         onTouchStart={(event) => handleTouchStart(event.changedTouches[0].clientX)}
         onTouchEnd={(event) => handleTouchEnd(event.changedTouches[0].clientX)}
@@ -147,10 +147,10 @@ export default function ProjectGallery({
             key={shot.src}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className={`overflow-hidden rounded-2xl border bg-black/30 text-left transition ${
+            className={`overflow-hidden border bg-[#f4ecd9] text-left transition ${
               index === activeIndex
-                ? "border-[var(--color-accent-soft)] shadow-[0_0_0_1px_rgba(255,196,141,0.25)]"
-                : "border-white/10 hover:border-white/30"
+                ? "border-[var(--color-ink)] shadow-[3px_3px_0_rgba(39,35,29,0.16)]"
+                : "border-[var(--color-ink)]/25 hover:border-[var(--color-ink)]"
             }`}
             aria-label={`Show screenshot ${index + 1}`}
             aria-pressed={index === activeIndex}
@@ -170,46 +170,46 @@ export default function ProjectGallery({
       {typeof document !== "undefined" && isLightboxOpen
         ? createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/88 p-4 sm:p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[rgba(39,35,29,0.72)] p-4 sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="Fullscreen project screenshot"
           onClick={() => setIsLightboxOpen(false)}
         >
           <div
-            className="relative my-auto flex w-full max-w-6xl flex-col rounded-[1.5rem] border border-white/10 bg-[var(--color-ink)]/96 p-4 shadow-2xl shadow-black/50 sm:p-5"
+            className="paper-shell relative my-auto flex w-full max-w-6xl flex-col border border-[var(--color-ink)] p-4 shadow-[8px_8px_0_rgba(39,35,29,0.22)] sm:p-5"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="mb-4 flex items-center justify-between gap-3">
-              <p className="text-sm text-white/72">
+              <p className="font-mono text-xs uppercase tracking-[0.14em]">
                 Screenshot {activeIndex + 1} of {screenshots.length}
               </p>
               <div className="flex gap-2">
                 <button
                   type="button"
                   onClick={showPrevious}
-                  className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/80 transition hover:border-[var(--color-accent-soft)] hover:text-[var(--color-accent-soft)]"
+                  className="border border-[var(--color-ink)] bg-[#f4ecd9] px-3 py-2 font-mono text-xs uppercase tracking-[0.12em]"
                 >
                   Prev
                 </button>
                 <button
                   type="button"
                   onClick={showNext}
-                  className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/80 transition hover:border-[var(--color-accent-soft)] hover:text-[var(--color-accent-soft)]"
+                  className="border border-[var(--color-ink)] bg-[#f4ecd9] px-3 py-2 font-mono text-xs uppercase tracking-[0.12em]"
                 >
                   Next
                 </button>
                 <button
                   type="button"
                   onClick={() => setIsLightboxOpen(false)}
-                  className="rounded-full border border-white/10 px-3 py-2 text-sm text-white/80 transition hover:border-[var(--color-accent-soft)] hover:text-[var(--color-accent-soft)]"
+                  className="border border-[var(--color-ink)] bg-[var(--color-accent)] px-3 py-2 font-mono text-xs uppercase tracking-[0.12em]"
                 >
                   Close
                 </button>
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[1.15rem] border border-white/10 bg-black/40">
+            <div className="overflow-hidden border border-[var(--color-ink)] bg-[#efe3cb]">
               <Image
                 src={activeShot.src}
                 alt={activeShot.alt}
