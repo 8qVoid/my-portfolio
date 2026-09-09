@@ -87,7 +87,6 @@ export default function InteractiveHero() {
         />
       </div>
       <div className="floating-label">
-        <span>✳</span>
         <div>
           Designed to feel alive.
           <br />

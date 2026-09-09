@@ -10,7 +10,7 @@ export default function Home() {
       <ScrollReveal />
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header wrap">
-        <a className="logo" href="#" aria-label="Mark home">mark<span>✳</span></a>
+        <a className="logo" href="#" aria-label="Mark home">mark</a>
         <nav aria-label="Main navigation">
           <a href="#projects">Work</a><a href="#about">About</a><a href="#skills">Toolkit</a>
         </nav>
@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <InteractiveHero />
         </section>
-        <div className="discipline-strip"><div className="wrap"><span>GOOD IDEAS DESERVE GOOD EXECUTION</span><b>✳</b><span>WEB DEVELOPMENT</span><b>✳</b><span>MOBILE EXPERIENCES</span><b>✳</b><span>PRODUCT THINKING</span></div></div>
+        <div className="discipline-strip"><div className="wrap"><span>GOOD IDEAS DESERVE GOOD EXECUTION</span><b aria-hidden="true" /><span>WEB DEVELOPMENT</span><b aria-hidden="true" /><span>MOBILE EXPERIENCES</span><b aria-hidden="true" /><span>PRODUCT THINKING</span></div></div>
         <section className="section wrap" id="projects" data-reveal>
           <div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2>A few things<br />I’ve brought to life<span>.</span></h2></div><p>Real projects. End-to-end flows.<br />A little curiosity in every build.</p></div>
           <ProjectGrid />
@@ -45,7 +45,7 @@ export default function Home() {
         </section>
         <section className="contact-section wrap" id="contact" data-reveal><p className="eyebrow">HAVE SOMETHING IN MIND?</p><ContactCta /><div className="contact-bottom"><p>Great things start with a conversation.</p><a href="mailto:moosec06@gmail.com">moosec06@gmail.com ↗</a></div></section>
       </main>
-      <footer className="wrap"><a className="logo" href="#">mark<span>✳</span></a><p>© {new Date().getFullYear()} Mark Laurence Erezuela</p><a href="https://github.com/8qVoid" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#main">Back to top ↑</a></footer>
+      <footer className="wrap"><a className="logo" href="#">mark</a><p>© {new Date().getFullYear()} Mark Laurence Erezuela</p><a href="https://github.com/8qVoid" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#main">Back to top ↑</a></footer>
     </>
   );
 }
