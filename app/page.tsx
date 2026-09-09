@@ -22,7 +22,7 @@ export default function Home() {
             <p className="eyebrow"><span className="status-dot" /> MARK LAURENCE EREZUELA</p>
             <h1>Mark Erezuela<br /><span>builds digital products</span><br />that feel alive.</h1>
             <p className="hero-description">Web apps, Android apps, and product flows shaped with clean interfaces, thoughtful logic, and the tiny interactions that make software feel finished.</p>
-            <div className="hero-actions"><a className="button primary" href="#projects">Explore my work <span>↘</span></a><a className="button ghost" href="#contact">Open contact menu <span>⌘K</span></a></div>
+            <div className="hero-actions"><a className="button primary" href="#projects">Explore my work <span>↘</span></a><a className="button ghost" href="#contact">Open contact menu <span>↘</span></a></div>
             <div className="hero-note"><span>FULL-STACK DEVELOPMENT</span><i /> <span>ANDROID APPS</span></div>
           </div>
           <InteractiveHero />

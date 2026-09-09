@@ -62,7 +62,7 @@ export default function ContactCommand() {
   return (
     <>
       <button ref={opener} type="button" className="nav-contact command-trigger" onClick={show}>
-        Let&apos;s talk <span>⌘K</span>
+        Let&apos;s talk
       </button>
       <dialog
         ref={dialog}
@@ -97,7 +97,7 @@ export default function ContactCommand() {
               </a>
             ))}
           </div>
-          <p className="command-hint">Press Ctrl/⌘ + K from anywhere to reopen this.</p>
+          <p className="command-hint">Choose an option to keep moving.</p>
         </div>
       </dialog>
     </>
