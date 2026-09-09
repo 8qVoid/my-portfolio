@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mark Erezuela — Portfolio
 
-## Getting Started
+A responsive web and mobile developer portfolio built with Next.js, React, and TypeScript.
 
-First, run the development server:
+## Run locally
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Use Node.js 22 or newer:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    npm ci
+    npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+On this PC, start-local.ps1 also detects the compatible bundled Node runtime if the default Node installation is too old:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    powershell -ExecutionPolicy Bypass -File .\start-local.ps1
 
-## Learn More
+Open http://localhost:3000. Stop the server with Ctrl+C.
 
-To learn more about Next.js, take a look at the following resources:
+## Checks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    npm run lint
+    npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Editing
 
-## Deploy on Vercel
+- app/page.tsx: introduction, about, toolkit, and contact.
+- app/data/projects.ts: project descriptions, repository links, and screenshots.
+- app/components/project-grid.tsx: category filtering and expandable details.
+- app/components/project-gallery.tsx: image selection and accessible native-dialog previews.
+- app/globals.css: responsive charcoal and lime design.
+- public/projects/: original project screenshots.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The gallery supports arrow keys, Escape, mobile swipe, modal focus containment, and focus restoration. Reduced-motion preferences are respected. Email links open the visitor's mail app; no backend or credentials are needed.
