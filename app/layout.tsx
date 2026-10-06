@@ -13,10 +13,37 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const siteUrl = "https://my-portfolio-livid-eight-62.vercel.app";
+const fullName = "Mark Laurence Erezuela";
+const title = `${fullName} | Web & Mobile Developer`;
+const description =
+  "Mark Laurence Erezuela builds thoughtful web and mobile experiences with Next.js, Laravel, and Kotlin.";
+
 export const metadata: Metadata = {
-  title: "Mark Erezuela | Web & Mobile Developer",
-  description:
-    "Mark Laurence Erezuela builds thoughtful web and mobile experiences with Next.js, Laravel, and Kotlin. Explore five projects, from marketplaces to Android apps.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: fullName,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
+};
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: fullName,
+  url: siteUrl,
+  description,
 };
 
 export default function RootLayout({
@@ -31,6 +58,12 @@ export default function RootLayout({
      
     >
       <body >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(person).replace(/</g, "\\u003c"),
+          }}
+        />
         {children}
       </body>
     </html>
