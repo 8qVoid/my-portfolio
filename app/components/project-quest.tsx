@@ -111,7 +111,7 @@ export default function ProjectQuest() {
               width={720}
               height={440}
               sizes="(max-width: 700px) 85vw, 45vw"
-            /> : <div className="quest-empty-preview"><span>REPOSITORY BUILD</span><strong>{project.title}</strong><small>Open the source details below</small></div>}
+            /> : <div className="quest-empty-preview"><span>{project.status ?? "REPOSITORY BUILD"}</span><strong>{project.title}</strong><small>Open the source details below</small></div>}
           </div>
           <div className="quest-preview-copy">
             <div className="quest-project-meta">
