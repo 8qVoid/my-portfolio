@@ -25,7 +25,7 @@ export default function Home() {
             <h1>Mark Erezuela<br /><span>builds digital products</span><br />that feel alive.</h1>
             <p className="hero-description">Web apps, Android apps, and product flows shaped with clean interfaces, thoughtful logic, and the tiny interactions that make software feel finished.</p>
             <div className="hero-actions"><a className="button primary" href="#project-explorer">Choose your path <span>↘</span></a><a className="button ghost" href="#contact">Let&apos;s talk <span>↗</span></a></div>
-            <div className="hero-note"><span>FIVE PROJECTS TO DISCOVER</span><i /> <span>WEB + ANDROID</span><a href="#projects" aria-label="Scroll to selected work">↓</a></div>
+            <div className="hero-note"><span>PROJECTS TO DISCOVER</span><i /> <span>WEB + ANDROID</span><a href="#projects" aria-label="Scroll to selected work">↓</a></div>
           </div>
           <InteractiveHero />
         </section>
@@ -37,7 +37,7 @@ export default function Home() {
         </section>
         <section className="about-section" id="about" data-reveal><div className="wrap about-grid">
           <div><p className="eyebrow">02 / THE PERSON BEHIND THE PIXELS</p><h2>Curious mind.<br />Builder at heart<span>.</span></h2><div className="signature">Mark Erezuela <span>↗</span></div></div>
-          <div className="about-copy"><p>I’m Mark, a developer who enjoys turning messy ideas into something useful. I work across full-stack web apps and Android, connecting thoughtful interfaces with the logic behind them.</p><p>I learn by building. I use AI-assisted development to explore quickly, then refine the flows, states, and small details that make a product feel complete.</p><div className="about-stats"><div><strong>12</strong><span>Portfolio projects</span></div><div><strong>03</strong><span>Build directions</span></div><div><strong>∞</strong><span>Things to explore</span></div></div></div>
+          <div className="about-copy"><p>I’m Mark, a developer who enjoys turning messy ideas into something useful. I work across full-stack web apps and Android, connecting thoughtful interfaces with the logic behind them.</p><p>I learn by building. I use AI-assisted development to explore quickly, then refine the flows, states, and small details that make a product feel complete.</p><div className="about-stats"><div><strong>11</strong><span>Portfolio projects</span></div><div><strong>03</strong><span>Build directions</span></div><div><strong>∞</strong><span>Things to explore</span></div></div></div>
         </div></section>
         <section className="section wrap" id="skills" data-reveal><div className="section-heading"><div><p className="eyebrow">03 / MY TOOLKIT</p><h2>The right tools.<br />For the right idea<span>.</span></h2></div><p>From database to interface,<br />and everything in between.</p></div>
           <InteractiveToolkit />
