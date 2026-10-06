@@ -8,9 +8,11 @@ const categories = ["All projects", "Web apps", "Mobile apps"] as const;
 
 export default function ProjectGrid() {
   const [category, setCategory] = useState<string>("All projects");
-  const visible = featuredProjects.filter(project => category === "All projects" || (category === "Mobile apps") === project.stack.includes("Kotlin"));
+  const [query, setQuery] = useState("");
+  const visible = featuredProjects.filter(project => (category === "All projects" || (category === "Mobile apps") === project.stack.includes("Kotlin")) && `${project.title} ${project.stack.join(" ")} ${project.summary}`.toLowerCase().includes(query.toLowerCase()));
   return <>
-    <div className="project-toolbar"><div className="filters" aria-label="Filter projects">{categories.map(item => <button key={item} onClick={() => setCategory(item)} aria-pressed={category === item}>{item}{item === "All projects" && <span>05</span>}</button>)}</div><span className="project-count" aria-live="polite">{visible.length} projects</span></div>
+    <div className="project-toolbar"><div className="filters" aria-label="Filter projects">{categories.map(item => <button key={item} onClick={() => setCategory(item)} aria-pressed={category === item}>{item}{item === "All projects" && <span>05</span>}</button>)}</div><label className="project-search"><span aria-hidden="true">⌕</span><input type="search" aria-label="Search projects or technologies" placeholder="Find a project or technology" value={query} onChange={event => setQuery(event.target.value)} /></label><span className="project-count" aria-live="polite">{visible.length} projects</span></div>
+    {visible.length === 0 && <div className="empty-projects"><h3>No matches yet.</h3><p>Try another project name or technology.</p><button className="button ghost" onClick={() => { setQuery(""); setCategory("All projects"); }}>Reset filters ↗</button></div>}
     <div className="project-grid">{visible.map(project => {
       const index = featuredProjects.indexOf(project);
       return <article className={`project-card project-${index}`} key={project.title}>

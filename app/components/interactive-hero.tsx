@@ -62,13 +62,13 @@ export default function InteractiveHero() {
           <strong>{scene.title}</strong>
           <p>{scene.note}</p>
         </div>
-        <div className="hero-tabs" role="tablist" aria-label="Choose hero project preview">
+        <div className="hero-tabs" role="group" aria-label="Choose hero project preview">
           {scenes.map((item, index) => (
             <button
               key={item.title}
               type="button"
-              role="tab"
-              aria-selected={active === index}
+              aria-pressed={active === index}
+              aria-label={`Preview ${item.title}`}
               onClick={() => setActive(index)}
             >
               {String(index + 1).padStart(2, "0")}
