@@ -17,7 +17,7 @@ export default function ProjectGallery({ screenshots, title }: Props) {
     element?.addEventListener("close", restore);
     return () => { element?.removeEventListener("close", restore); document.body.style.overflow = ""; };
   }, []);
-  if (!shot) return null;
+  if (!shot) return <div className="gallery gallery-empty"><div><span className="gallery-empty-kicker">PROJECT NOTES</span><strong>{title}</strong><p>Repository details and build notes are available in the source.</p><a href="#case-studies">Back to project list ↘</a></div></div>;
   function move(delta: number) { setIndex(current => (current + delta + screenshots.length) % screenshots.length); }
   return <div className="gallery">
     <button ref={opener} className="project-preview" aria-label={`Open ${title} screenshots`} onClick={() => { dialog.current?.showModal(); document.body.style.overflow = "hidden"; }}>

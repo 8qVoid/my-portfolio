@@ -633,3 +633,14 @@ summary { color:#b8c8dd; }
   .quest-preview-image img { height:220px; }
   .quest-preview-image.is-mobile img { height:270px; }
 }
+.gallery-empty { min-height:310px; display:grid; place-items:center; padding:30px; background:linear-gradient(145deg,#243b57,#17283e); }
+.gallery-empty > div { display:grid; gap:12px; max-width:280px; }
+.gallery-empty-kicker,.quest-empty-preview > span { color:#92afd3; font:8px var(--font-ibm-plex-mono),monospace; letter-spacing:1.2px; }
+.gallery-empty strong { font-size:25px; font-weight:500; }
+.gallery-empty p { color:#aebed2; font-size:11px; line-height:1.7; margin:0; }
+.gallery-empty a { color:#c6dcfb; font-size:11px; }
+.quest-preview-image.is-empty { background:linear-gradient(145deg,#223b59,#14263b); }
+.quest-empty-preview { display:grid; gap:12px; text-align:left; padding:25px; width:100%; }
+.quest-empty-preview strong { font-size:28px; line-height:1.1; font-weight:500; }
+.quest-empty-preview small { color:#a9bed8; font-size:10px; }
+@media (max-width:700px) { .gallery-empty { min-height:270px; } .gallery-empty strong { font-size:22px; } }
