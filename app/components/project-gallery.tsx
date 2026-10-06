@@ -17,7 +17,7 @@ export default function ProjectGallery({ screenshots, title, status }: Props) {
     element?.addEventListener("close", restore);
     return () => { element?.removeEventListener("close", restore); document.body.style.overflow = ""; };
   }, []);
-  if (!shot) return <div className="gallery gallery-empty"><div><span className="gallery-empty-kicker">{status ?? "PROJECT STATUS"}</span><strong>{title}</strong><p>Repository details and build notes are available in the source.</p><a href="#case-studies">Back to project list ↘</a></div></div>;
+  if (!shot) return <div className="gallery gallery-empty" aria-label={`${title} project status`}><div className="build-visual"><div className="build-visual-top"><span className="gallery-empty-kicker">BUILD STATUS</span><span className="status-pill">{status ?? "In progress"}</span></div><div className="build-orbit" aria-hidden="true"><span className="build-orbit-core" /><i /><i /><i /></div><div className="build-visual-copy"><strong>{title}</strong><p>{status === "Available to try" ? "Ready to explore from the repository." : status === "Earlier build" ? "An earlier direction kept here for reference." : "Taking shape in code, one useful detail at a time."}</p></div><div className="build-progress" aria-hidden="true"><span /><span /><span /><span /></div></div></div>;
   function move(delta: number) { setIndex(current => (current + delta + screenshots.length) % screenshots.length); }
   return <div className="gallery">
     <button ref={opener} className="project-preview" aria-label={`Open ${title} screenshots`} onClick={() => { dialog.current?.showModal(); document.body.style.overflow = "hidden"; }}>

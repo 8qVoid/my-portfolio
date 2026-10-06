@@ -633,12 +633,25 @@ summary { color:#b8c8dd; }
   .quest-preview-image img { height:220px; }
   .quest-preview-image.is-mobile img { height:270px; }
 }
-.gallery-empty { min-height:310px; display:grid; place-items:center; padding:30px; background:linear-gradient(145deg,#243b57,#17283e); }
-.gallery-empty > div { display:grid; gap:12px; max-width:280px; }
+.gallery-empty { min-height:310px; display:grid; place-items:center; padding:30px; background:radial-gradient(circle at 50% 47%,#395d8140,transparent 38%),linear-gradient(145deg,#243b57,#17283e); overflow:hidden; }
+.build-visual { width:100%; min-height:250px; display:flex; flex-direction:column; justify-content:space-between; position:relative; }
+.build-visual-top { display:flex; justify-content:space-between; align-items:center; gap:12px; }
 .gallery-empty-kicker,.quest-empty-preview > span { color:#92afd3; font:8px var(--font-ibm-plex-mono),monospace; letter-spacing:1.2px; }
-.gallery-empty strong { font-size:25px; font-weight:500; }
-.gallery-empty p { color:#aebed2; font-size:11px; line-height:1.7; margin:0; }
-.gallery-empty a { color:#c6dcfb; font-size:11px; }
+.status-pill { border:1px solid #a6c6ff42; border-radius:100px; padding:6px 9px; color:#d4e4f8; font:8px var(--font-ibm-plex-mono),monospace; }
+.build-orbit { position:absolute; width:170px; height:170px; left:50%; top:43%; transform:translate(-50%,-50%); border:1px solid #a6c6ff24; border-radius:50%; }
+.build-orbit::before,.build-orbit::after { content:""; position:absolute; inset:20px; border:1px dashed #7ed4db36; border-radius:50%; }
+.build-orbit::after { inset:45px; border-style:solid; border-color:#a6c6ff35; }
+.build-orbit-core { position:absolute; width:34px; height:34px; left:50%; top:50%; transform:translate(-50%,-50%); border-radius:50%; background:#a6c6ff; box-shadow:0 0 35px #a6c6ff70; }
+.build-orbit i { position:absolute; width:7px; height:7px; background:#7ed4db; border-radius:50%; box-shadow:0 0 14px #7ed4db; }
+.build-orbit i:nth-of-type(1) { left:10px; top:82px; }
+.build-orbit i:nth-of-type(2) { right:22px; top:22px; }
+.build-orbit i:nth-of-type(3) { right:8px; bottom:40px; }
+.build-visual-copy { position:relative; z-index:1; margin-top:auto; padding-top:148px; }
+.build-visual-copy strong { display:block; font-size:18px; font-weight:500; }
+.build-visual-copy p { color:#aebed2; font-size:10px; line-height:1.6; margin:7px 0 0; max-width:245px; }
+.build-progress { display:flex; gap:5px; margin-top:18px; }
+.build-progress span { height:3px; flex:1; border-radius:10px; background:#a6c6ff38; }
+.build-progress span:first-child { background:#a6c6ff; }
 .quest-preview-image.is-empty { background:linear-gradient(145deg,#223b59,#14263b); }
 .quest-empty-preview { display:grid; gap:12px; text-align:left; padding:25px; width:100%; }
 .quest-empty-preview strong { font-size:28px; line-height:1.1; font-weight:500; }
