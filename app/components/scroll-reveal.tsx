@@ -12,6 +12,9 @@ export default function ScrollReveal() {
       frame = requestAnimationFrame(() => {
         const max = document.documentElement.scrollHeight - window.innerHeight;
         progress?.style.setProperty("--progress", String(max > 0 ? window.scrollY / max : 0));
+        if (window.scrollY < 80) {
+          document.querySelectorAll(".site-header nav a[aria-current]").forEach(link => link.removeAttribute("aria-current"));
+        }
       });
     };
     window.addEventListener("scroll", updateScroll, { passive: true });
@@ -50,7 +53,7 @@ export default function ScrollReveal() {
           }
         });
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.12 },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.01 },
     );
 
     items.forEach((item) => {

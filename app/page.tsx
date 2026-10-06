@@ -4,6 +4,7 @@ import InteractiveHero from "./components/interactive-hero";
 import ProjectGrid from "./components/project-grid";
 import ScrollReveal from "./components/scroll-reveal";
 import InteractiveToolkit from "./components/interactive-toolkit";
+import ProjectQuest from "./components/project-quest";
 
 export default function Home() {
   return (
@@ -23,15 +24,16 @@ export default function Home() {
             <p className="eyebrow"><span className="status-dot" /> INDEPENDENT DEVELOPER · WEB + MOBILE</p>
             <h1>Mark Erezuela<br /><span>builds digital products</span><br />that feel alive.</h1>
             <p className="hero-description">Web apps, Android apps, and product flows shaped with clean interfaces, thoughtful logic, and the tiny interactions that make software feel finished.</p>
-            <div className="hero-actions"><a className="button primary" href="#projects">Explore my work <span>↘</span></a><a className="button ghost" href="#contact">Open contact menu <span>↘</span></a></div>
-            <div className="hero-note"><span>SCROLL TO EXPLORE</span><i /> <span>IDEAS → EXPERIENCES</span><a href="#projects" aria-label="Scroll to selected work">↓</a></div>
+            <div className="hero-actions"><a className="button primary" href="#project-explorer">Choose your path <span>↘</span></a><a className="button ghost" href="#contact">Let&apos;s talk <span>↗</span></a></div>
+            <div className="hero-note"><span>FIVE PROJECTS TO DISCOVER</span><i /> <span>WEB + ANDROID</span><a href="#projects" aria-label="Scroll to selected work">↓</a></div>
           </div>
           <InteractiveHero />
         </section>
-        <div className="discipline-strip" aria-label="Web development, mobile experiences, product thinking"><div className="marquee-track" aria-hidden="true">{[0, 1].map(copy => <div key={copy}><span>THOUGHTFUL INTERFACES</span><b>✳</b><span>WEB DEVELOPMENT</span><b>✳</b><span>MOBILE EXPERIENCES</span><b>✳</b><span>PRODUCT THINKING</span><b>✳</b></div>)}</div></div>
+        <div className="discipline-strip" aria-label="Web development, mobile experiences, product thinking"><div className="marquee-track" aria-hidden="true">{[0, 1].map(copy => <div key={copy}><span>THOUGHTFUL INTERFACES</span><b /><span>WEB DEVELOPMENT</span><b /><span>MOBILE EXPERIENCES</span><b /><span>PRODUCT THINKING</span><b /></div>)}</div></div>
         <section className="section wrap" id="projects" data-reveal>
           <div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2>From a spark.<br />To something <span>real.</span></h2></div><p>Five projects. Countless little decisions.<br />Explore the screens and the thinking behind them.</p></div>
-          <ProjectGrid />
+          <ProjectQuest />
+          <div id="case-studies"><ProjectGrid /></div>
         </section>
         <section className="about-section" id="about" data-reveal><div className="wrap about-grid">
           <div><p className="eyebrow">02 / THE PERSON BEHIND THE PIXELS</p><h2>Curious mind.<br />Builder at heart<span>.</span></h2><div className="signature">Mark Erezuela <span>↗</span></div></div>
